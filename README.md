@@ -4,7 +4,7 @@ Teacher:<br/>
 **[Ehsan Kashfi](https://github.com/ehsanmody)** 
 
 Mentor:<br/>
-**Mostafa Sadeghi far**
+**[Mostafa Sadeghi far](https://github.com/mostafasadeghifar)**
 
 Contributers:<br/>
 **[Amir Reza Ardebili](https://github.com/seyedamirrezaardebili)**<br/>

@@ -6,14 +6,10 @@ use App\core\Application;
 
 $app = new Application(__DIR__);
 
-$app->router->get('/' , function () {
-
-    return 'Hello World';
-
-});
+$app->router->get('/', "home");
 
 
-$app->router->get('/contact' , 'contact');
+$app->router->get('/contact', 'contact');
 $app->router->get('/home', 'home');
 
 $app->run();

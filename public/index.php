@@ -11,7 +11,7 @@ $app->router->get('/', "home");
 
 $app->router->get('/contact', 'contact');
 $app->router->get('/home', 'home');
-$$app->router->get('/slm', 'slm');
+$app->router->get('/slm', 'slm');
 $app->router->get('/dalam', 'dalam');
 
 

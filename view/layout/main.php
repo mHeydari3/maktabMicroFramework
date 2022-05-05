@@ -28,9 +28,9 @@
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">dalam</a>
+                        <a class="nav-link" href="/dalam">dalam</a>
                     </li>                        <li class="nav-item">
-                        <a class="nav-link" href="/contact">slm</a>
+                        <a class="nav-link" href="/slm">slm</a>
                     </li>
                 </ul>
             </div>

@@ -4,7 +4,7 @@ Teacher:<br/>
 **Ehsan Kashfi  [<img src="https://img.shields.io/badge/Github-➡-blue"/>](https://github.com/ehsanmody)  [<img src="https://img.shields.io/badge/Profile-Linkedin-blue"/>](https://ir.linkedin.com/in/ehsan-kashfi)** 
 
 Mentor:<br/>
-**Mostafa Sadeghi far** [<img src="https://img.shields.io/badge/Github-➡-blue"/>](https://GitHub.com/mostafasadeghifar)  [<img src="https://img.shields.io/badge/Profile-Linkedin-blue"/>](https://GitHub.com/Naereen/ama.fr)
+**Mostafa Sadeghi far** [<img src="https://img.shields.io/badge/Github-➡-blue"/>](https://GitHub.com/mostafasadeghifar)  [<img src="https://img.shields.io/badge/Profile-Linkedin-blue"/>](http://linkedin.com)
 
 
 

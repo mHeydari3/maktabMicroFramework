@@ -23,9 +23,9 @@ class Router{
 
 
 
-    public function put($path , $callback){
+    // public function put($path , $callback){
 
-    }
+    // }
     
 
     public function resolve(){
@@ -38,7 +38,18 @@ class Router{
         if ($callback === false){
             die("Not found");
         }
+        if(is_string($callback)){
+           return $this->renderView($callback);
+        }
+    
         return $callback();
-        
+    }
+    public function renderView($view)
+    {
+        $layoutContent = $this->layoutContent();
+        require_once Application::$ROOT . "/../view/$view.php";
+    }
+    protected function layoutContent(){
+        require_once Application::$ROOT . "/../view/layout/main.php";
     }
 }

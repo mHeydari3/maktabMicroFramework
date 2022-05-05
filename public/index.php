@@ -1,9 +1,10 @@
 <?php
 
 require_once __DIR__ . "/../vendor/autoload.php";
+// define("ROOT", $_SERVER['DOCUMENT_ROOT']);
 use App\core\Application;
 
-$app = new Application();
+$app = new Application(__DIR__);
 
 $app->router->get('/' , function () {
 
@@ -12,9 +13,7 @@ $app->router->get('/' , function () {
 });
 
 
-$app->router->get('/test' , function (){
-
-    return "This is test page";
-});
+$app->router->get('/contact' , 'contact');
+$app->router->get('/home', 'home');
 
 $app->run();

@@ -6,10 +6,14 @@ use App\core\Application;
 
 $app = new Application(__DIR__);
 
-$app->router->get('/', "home");
+$app->router->get('/', "Home");
+$app->router->get('/GetAll', "GetAll");
+$app->router->get('/GetByID', 'GetByID');
+$app->router->get('/AddTODO', 'AddTODO');
+$app->router->post('/SendForm', 'SendForm');
+$app->router->post('/Toggle', 'Toggle');
 
 
-$app->router->get('/contact', 'contact');
-$app->router->get('/home', 'home');
+
 
 $app->run();

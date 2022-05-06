@@ -21,9 +21,7 @@ $app = new Application(__DIR__);
 
 $app->router->get('/home', [Controller::class, 'index']);
 
-$app->router->get('/', function () {
-    echo "it is /";
-});
+$app->router->get('/',  [Controller::class, 'index']);
 
 
 

@@ -1,18 +1,15 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "95aab3049993cfe68ddaece2c44fdca5",
-    "packages": [],
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+  "name": "admin/maktab-micro-framework",
+  "autoload": {
+    "psr-4": {
+      "App\\": "./"
+    }
+  },
+  "authors": [
+    {
+      "name": "mzeus98",
+      "email": "mzeus98@gmail.com"
+    }
+  ],
+  "require": {}
 }

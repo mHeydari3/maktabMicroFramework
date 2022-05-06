@@ -54,7 +54,7 @@ class Router
         $layoutContent = $this->layoutContent();
         $viewContent = $this->renderOnlyView($view);
         return str_replace('{{content}}', $viewContent, $layoutContent);
-        require_once Application::$ROOT . "/../view/$view.php";
+        // require_once Application::$ROOT . "/../view/$view.php";
     }
     protected function layoutContent()
     {

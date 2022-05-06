@@ -1,15 +1,15 @@
 {
-    "name": "admin/maktab-micro-framework",
-    "autoload": {
-        "psr-4": {
-            "App\\": "./"
-        }
-    },
-    "authors": [
-        {
-            "name": "mzeus98",
-            "email": "mzeus98@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "admin/maktab-micro-framework",
+  "autoload": {
+    "psr-4": {
+      "App\\": "./"
+    }
+  },
+  "authors": [
+    {
+      "name": "mzeus98",
+      "email": "mzeus98@gmail.com"
+    }
+  ],
+  "require": {}
 }

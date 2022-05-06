@@ -5,7 +5,7 @@ use App\core\Application;
 
 class View {
 
-    public function renderView($view ,array $array)
+    public function renderView($view ,array $array = [])
     {
         foreach ($array as $key=>$value){
             $$key=$value;
@@ -13,7 +13,7 @@ class View {
         }
         $layoutContent = $this->layoutContent();
         $viewContent = $this->renderOnlyView($view);
-        echo "str_replace('{{content}}', $viewContent, $layoutContent)";
+        echo str_replace('{{content}}', $viewContent, $layoutContent);
         // require_once Application::$ROOT . "/../view/$view.php";
     }
     protected function layoutContent()

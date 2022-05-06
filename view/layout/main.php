@@ -28,7 +28,7 @@
                         <a class="nav-link" href="/GetByID">GetByID</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/AddTODO">AddTOD</a>
+                        <a class="nav-link" href="/AddTODO">AddTODO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/SendForm">SendForm</a>
@@ -36,11 +36,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/Toggle">Toggle</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dalam">dalam</a>
-                    </li>                        <li class="nav-item">
-                        <a class="nav-link" href="/slm">slm</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>

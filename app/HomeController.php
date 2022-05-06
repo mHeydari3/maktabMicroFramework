@@ -2,7 +2,7 @@
 
 namespace App\app;
 use App\core\View; 
-class Controller
+class HomeController
 {
 public function index(){
         (new View)->renderView('home', [

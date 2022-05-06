@@ -49,7 +49,7 @@ class Router
 
         return $callback();
     }
-    public function renderView($view)
+    protected function renderView($view)
     {
         $layoutContent = $this->layoutContent();
         $viewContent = $this->renderOnlyView($view);

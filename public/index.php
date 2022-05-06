@@ -29,3 +29,4 @@ $app->router->get('/Mohammad', [TodoController::class, 'mohammad']);
 
 
 $app->run();
+var_dump($_POST);

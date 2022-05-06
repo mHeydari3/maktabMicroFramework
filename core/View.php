@@ -7,6 +7,7 @@ class View {
 
     public function renderView($view ,array $array = [])
     {
+        
         foreach ($array as $key=>$value){
             $$key=$value;
             

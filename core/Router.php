@@ -26,12 +26,6 @@ class Router
     }
 
 
-
-    // public function put($path , $callback){
-
-    // }
-
-
     public function resolve()
     {
         $path = $this->request->getPath();

@@ -7,9 +7,13 @@ class View {
 
     public function renderView($view ,array $array)
     {
+        foreach ($array as $key=>$value){
+            $$key=$value;
+            
+        }
         $layoutContent = $this->layoutContent();
         $viewContent = $this->renderOnlyView($view);
-        return str_replace('{{content}}', $viewContent, $layoutContent);
+        echo "str_replace('{{content}}', $viewContent, $layoutContent)";
         // require_once Application::$ROOT . "/../view/$view.php";
     }
     protected function layoutContent()
@@ -25,6 +29,7 @@ class View {
         require_once Application::$ROOT . "/../view/$view.php";
         return ob_get_clean();
     }
+
 
 }
 

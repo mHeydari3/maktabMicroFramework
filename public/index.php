@@ -15,5 +15,13 @@ $app->router->post('/Toggle', 'Toggle');
 
 
 
+<<<<<<< HEAD
+=======
+$app->router->get('/contact', 'contact');
+$app->router->get('/home', 'home');
+$app->router->get('/slm', 'slm');
+$app->router->get('/dalam', 'dalam');
+
+>>>>>>> 3a0dcbf1028b78440e7e57a7f3a72d2da01a8ea4
 
 $app->run();

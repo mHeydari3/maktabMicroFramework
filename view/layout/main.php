@@ -36,6 +36,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/Toggle">Toggle</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dalam">dalam</a>
+                    </li>                        <li class="nav-item">
+                        <a class="nav-link" href="/slm">slm</a>
+                    </li>
                 </ul>
             </div>
         </div>

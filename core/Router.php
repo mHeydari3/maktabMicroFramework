@@ -3,7 +3,7 @@
 namespace App\core;
 
 use App\Core\Request;
-
+use App\core\Application;
 class Router
 {
     public $routes = [];
@@ -43,30 +43,10 @@ class Router
         if ($callback === false) {
             die("Not found");
         }
-        if (is_string($callback)) {
-            return $this->renderView($callback);
+        if (is_array($callback)) {
+            $callback[0] = new $callback[0];
         }
-
-        return $callback();
-    }
-    protected function renderView($view)
-    {
-        $layoutContent = $this->layoutContent();
-        $viewContent = $this->renderOnlyView($view);
-        return str_replace('{{content}}', $viewContent, $layoutContent);
-        // require_once Application::$ROOT . "/../view/$view.php";
-    }
-    protected function layoutContent()
-    {
-        ob_start();
-        require_once Application::$ROOT . "/../view/layout/main.php";
-        return ob_get_clean();
+        call_user_func($callback);
     }
 
-    protected function renderOnlyView($view)
-    {
-        ob_start();
-        require_once Application::$ROOT . "/../view/$view.php";
-        return ob_get_clean();
-    }
 }

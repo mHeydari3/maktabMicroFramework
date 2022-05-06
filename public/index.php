@@ -15,7 +15,7 @@ $app->router->get('/', [HomeController::class, 'index']);
 $app->router->get('/GetAll', [TodoController::class, 'GetAll']);
 $app->router->get('/GetByID', [TodoController::class, 'GetByID']);
 $app->router->get('/AddTODO', [TodoController::class, 'AddTODO']);
-$app->router->get('/SendForm', [TodoController::class, 'SendForm']);
+$app->router->post('/SendForm', [TodoController::class, 'SendForm']);
 $app->router->post('/Toggle', [TodoController::class, 'Toggle']);
 $app->router->get('/Mohammad', [TodoController::class, 'mohammad']);
 

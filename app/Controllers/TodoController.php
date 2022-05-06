@@ -13,13 +13,18 @@ class TodoController{
     public function GetById(){
         (new View)->renderView('GetById');
     }
+    public function GetByID_Post(){
+        $id = $_POST['todoID'];
+        (new View)->renderView('ShowByID' , JsonModel::getByID($id));
+
+    }
     public function AddTODO(){
         (new View)->renderView('AddTODO');
     }
     public function SendForm(){
         $userInput = $_REQUEST['todoTitle'];
         JsonModel::addToJson($userInput);
-        header("Location: /GetAll" );
+        //header("Location: /GetAll" );
         /* (new View)->renderView('SendForm' , []); */
     }
     public function Toggle(){

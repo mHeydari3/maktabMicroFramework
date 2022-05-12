@@ -6,7 +6,7 @@ class MySqlConnection implements ConnectionInterface
 {
   private static $instance = null;
   private $host = "127.0.0.1:3307";
-  private $name = "market";
+  private $name = "tododb";
   private $user = "root";
   private $pass = "";
 

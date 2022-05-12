@@ -13,9 +13,9 @@ public function index(){
         //    'name'=>'mmd',
         //    'openingDate'=>`NOW()`,
         // 'city'=>"tehran"        ]);
-        $res = Branches::do()->find('1');
+        /* $res = Branches::do()->find('1');
         var_dump($res);
-        die();
+        die(); */
 
         // 
         (new View)->renderView('home', [

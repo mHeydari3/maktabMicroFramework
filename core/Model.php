@@ -5,6 +5,7 @@ namespace App\core;
 use App\core\DB\Connection\ConnectionInterface;
 use App\core\DB\MySqlDatabase;
 use stdClass;
+use App\core\DB\DatabaseInterface;
 
 abstract class  Model
 {
@@ -29,5 +30,12 @@ abstract class  Model
     {
 
         return $this->query->select()->where($col, $value)->fetch();
+    }
+    
+    // SELECT array $cols from table then fetch or fetchAll
+    public function select(array $cols = ['*'])
+    {
+    
+        return $this->query->select($cols)->fetchAll();
     }
 }

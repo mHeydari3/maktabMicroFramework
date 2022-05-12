@@ -15,14 +15,23 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Deadline date</th>
+                <th scope="col">Color</th>
+                <th scope="col">Status</th>
 
             </tr>
         </thead>
         <tbody>
 
             <?php
+            
                 foreach($array as $key => $value){
-                    echo "<tr><td>$key</td><td>$value</td></tr>";
+                    echo "<tr>";
+                    foreach($value as $item){
+                        echo "<td>$item</td>";
+                    }
+                    echo "</tr>";
                 } 
             ?>
 

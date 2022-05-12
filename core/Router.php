@@ -35,6 +35,8 @@ class Router
         $callback = $this->routes[$method][$path] ?? false;
 
         if ($callback === false) {
+            (Application::$app)->response->setStatusCode(404);
+            //todo set page 404 for view
             die("Not found");
         }
         if (is_array($callback)) {

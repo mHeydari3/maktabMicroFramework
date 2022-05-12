@@ -29,12 +29,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/AddTODO">AddTODO</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/SendForm">SendForm</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Toggle">Toggle</a>
-                    </li>
+
                     
                 </ul>
             </div>

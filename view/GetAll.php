@@ -1,43 +1,46 @@
 <h1>Get All TODOs</h1>
 
-<br/>
+<br />
 <style>
-    td{
-        border:1px solid black;
+    td {
+        border: 1px solid black;
     }
 </style>
 <div class="row">
     <div class="col col-3"></div>
     <div class="col col-6">
 
-    <table class="table table-dark table-striped">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col">Deadline date</th>
-                <th scope="col">Color</th>
-                <th scope="col">Status</th>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Deadline date</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Status</th>
 
-            </tr>
-        </thead>
-        <tbody>
+                </tr>
+            </thead>
+            <tbody>
 
-            <?php
-            
-                foreach($array as $key => $value){
+                <?php
+
+                foreach ($array as $key => $value) {
                     echo "<tr>";
-                    foreach($value as $item){
-                        echo "<td>$item</td>";
+                    foreach ($value as $myKey => $item) {
+                        if ($myKey == "title")
+                            echo "<td><a href='/GetByID?todoID=" . $value->id . "'>$item</a></td>";
+                        else
+                            echo "<td>$item</td>";
                     }
                     echo "</tr>";
-                } 
-            ?>
+                }
+                ?>
 
-        </tbody>
-    
-    </table>
+            </tbody>
+
+        </table>
 
 
     </div>

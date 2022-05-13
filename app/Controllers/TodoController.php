@@ -7,47 +7,58 @@ use App\Core\View;
 use App\app\Models\Todos;
 
 
-class TodoController{
-    public function GetAll(){
+class TodoController
+{
+    public function GetAll()
+    {
         $res = Todos::do()->select();
-        
 
-        (new View)->renderView('GetAll' , $res);
+
+        (new View)->renderView('GetAll', $res);
     }
-    public function GetById(){
+    public function GetById()
+    {
         (new View)->renderView('GetById');
     }
-    public function GetByID_Post(){
+    public function GetByID_Post()
+    {
         $id = $_POST['todoID'];
-        $res = Todos::do()->find($id , "id");
+        $res = Todos::do()->find($id, "id");
 
-        
-        (new View)->renderView('ShowByID' , [$res]);
 
+        (new View)->renderView('ShowByID', [$res]);
     }
-    public function AddTODO(){
+    public function GetByID_Get()
+    {
+        $id = $_GET['todoID'];
+        $res = Todos::do()->find($id, "id");
+
+
+        (new View)->renderView('ShowByID', [$res]);
+    }
+    public function AddTODO()
+    {
         (new View)->renderView('AddTODO');
     }
-    public function SendForm(){
+    public function SendForm()
+    {
         extract($_POST);
 
-        
+
         $res = Todos::do()->create([
-            'title'=>           $todoTitle,
-            'description'=>     $description,
-            'deadline'=>        $date,
-            'color'=>           $color,
-            'status'=>          $status 
-         ]);
-        
+            'title' =>           $todoTitle,
+            'description' =>     $description,
+            'deadline' =>        $date,
+            'color' =>           $color,
+            'status' =>          $status
+        ]);
+
         /* JsonModel::addToJson($userInput); */
-        header("Location: /GetAll" );
+        header("Location: /GetAll");
         /* (new View)->renderView('SendForm' , []); */
     }
-    public function Toggle(){
+    public function Toggle()
+    {
         (new View)->renderView('Toggle');
     }
-    
-
-
 }

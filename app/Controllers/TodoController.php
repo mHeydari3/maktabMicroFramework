@@ -73,8 +73,8 @@ class TodoController
     }
     public function delete(){
         $id=$_GET["todoID"];
-
         (new View)->renderView('delete');
+        header("Location:/GetAll" );
     }
     public function submitEdit(){
         $res = Todos::do()->update($_POST);

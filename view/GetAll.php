@@ -19,6 +19,7 @@
                     <th scope="col">Deadline date</th>
                     <th scope="col">Color</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
 
                 </tr>
             </thead>
@@ -34,6 +35,7 @@
                         else
                             echo "<td>$item</td>";
                     }
+                    echo "<td><a href='/edit?todoID=" . $value->id . "'><button>edit</button></a><a href='/delete?todoID=" . $value->id . "'><button>delete</button></a</td>";
                     echo "</tr>";
                 }
                 ?>

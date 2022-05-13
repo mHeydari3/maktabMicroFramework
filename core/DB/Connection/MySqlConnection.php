@@ -5,10 +5,10 @@ namespace App\core\DB\Connection;
 class MySqlConnection implements ConnectionInterface
 {
   private static $instance = null;
-  private $host = "127.0.0.1";
+  private $host = "localhost:3306";
   private $name = "tododb";
   private $user = "root";
-  private $pass = "";
+  private $pass = "@Mii1376";
 
   private \PDO $conn;
 

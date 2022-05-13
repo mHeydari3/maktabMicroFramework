@@ -3,7 +3,7 @@
 namespace App\app\Controllers;
 
 use App\app\Models\JsonModel;
-use App\Core\View;
+use App\core\View;
 use App\app\Models\Todos;
 
 
@@ -38,6 +38,7 @@ class TodoController
     }
     public function AddTODO()
     {
+        // die("a");
         (new View)->renderView('AddTODO');
     }
     public function SendForm()
@@ -60,5 +61,26 @@ class TodoController
     public function Toggle()
     {
         (new View)->renderView('Toggle');
+    }
+    public function edit(){
+        $id=$_GET["todoID"];
+        // var_dump($id);
+        $res = Todos::do()->find($id, "id");
+        // var_dump($res);
+        // die("a");
+        (new View)->renderView('edit',[$res]);
+
+    }
+    public function delete(){
+        $id=$_GET["todoID"];
+
+        (new View)->renderView('delete');
+    }
+    public function submitEdit(){
+        $res = Todos::do()->update($_POST);
+
+        // (new View)->renderView('GetAll');
+        header("Location:/GetAll" );
+        
     }
 }

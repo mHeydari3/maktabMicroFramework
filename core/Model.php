@@ -38,4 +38,9 @@ abstract class  Model
     
         return $this->query->select($cols)->fetchAll();
     }
+    
+    public function update(array $fields)
+    {
+        return $this->query->update($fields)->where("id",$_GET["id"])->exec() ;
+    }
 }

@@ -19,7 +19,13 @@ $app->router->get('/GetByID', [TodoController::class, 'GetByID_Get']);
 $app->router->get('/AddTODO', [TodoController::class, 'AddTODO']);
 $app->router->post('/SendForm', [TodoController::class, 'SendForm']);
 $app->router->post('/Toggle', [TodoController::class, 'Toggle']);
-$app->router->get('/Mohammad', [TodoController::class, 'mohammad']);
+
+$app->router->get('/delete', [TodoController::class, 'delete']);
+$app->router->get('/edit', [TodoController::class, 'edit']);
+$app->router->post('/edit', [TodoController::class, 'submitEdit']);
+
+
+
 
 /*  $app->router->get('/contact', 'contact');
  $app->router->get('/home', 'home');

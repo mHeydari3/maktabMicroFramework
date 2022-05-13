@@ -74,7 +74,7 @@ class MySqlDatabase implements DatabaseInterface
         );
 
         $this->query = "UPDATE " . $this->table . " SET " . implode(",", $arr);
-
+        
         return $this;
     }
 

@@ -8,9 +8,9 @@ class View {
     public function renderView($view ,array $array = [])
     {
         
-        foreach ($array as $key=>$value){
+        /* foreach ($array as $key=>$value){
             $$key=$value;   
-        }
+        } */
         
         $layoutContent = $this->layoutContent($array);
         $viewContent = $this->renderOnlyView($view , $array );

@@ -21,8 +21,10 @@ $app->router->post('/SendForm', [TodoController::class, 'SendForm']);
 $app->router->post('/Toggle', [TodoController::class, 'Toggle']);
 
 $app->router->get('/delete', [TodoController::class, 'delete']);
+// $app->router->delete('/delete', [TodoController::class, 'delete']);
 $app->router->get('/edit', [TodoController::class, 'edit']);
 $app->router->post('/edit', [TodoController::class, 'submitEdit']);
+// $app->router->put('/update', [TodoController::class, 'submitEdit']);
 
 
 

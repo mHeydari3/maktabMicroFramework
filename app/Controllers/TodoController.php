@@ -5,6 +5,7 @@ namespace App\app\Controllers;
 use App\app\Models\JsonModel;
 use App\core\View;
 use App\app\Models\Todos;
+use App\app\utility\Redirect;
 use App\core\Controller;
 
 class TodoController extends Controller
@@ -14,7 +15,7 @@ class TodoController extends Controller
         $res = Todos::do()->select();
 
 
-        ($this-> view)->renderView('GetAll', $res);
+        ($this->view)->renderView('GetAll', $res);
     }
     public function GetById()
     {
@@ -30,7 +31,7 @@ class TodoController extends Controller
     }
     public function GetByID_Get()
     {
-        $id = $_GET['todoID']??null;
+        $id = $_GET['todoID'] ?? null;
         $res = Todos::do()->find($id, "id");
 
 
@@ -38,7 +39,6 @@ class TodoController extends Controller
     }
     public function AddTODO()
     {
-        // die("a");
         ($this->view)->renderView('AddTODO');
     }
     public function SendForm()
@@ -53,36 +53,41 @@ class TodoController extends Controller
             'color' =>           $color,
             'status' =>          $status
         ]);
-
-        /* JsonModel::addToJson($userInput); */
-        header("Location: /GetAll");
-        /* (new View)->renderView('SendForm' , []); */
+        Redirect::to("/GetAll");
     }
     public function Toggle()
     {
         ($this->view)->renderView('Toggle');
     }
-    public function edit(){
-        $id=$_GET["todoID"];
-        // var_dump($id);
+    public function edit()
+    {
+        $id = $_GET["todoID"];
         $res = Todos::do()->find($id, "id");
-        // var_dump($res);
-        // die("a");
-        ($this->view)->renderView('edit',[$res]);
 
+        ($this->view)->renderView('edit', [$res]);
     }
-    public function delete(){
-        $id=$_GET["todoID"];
-        //todo drop as databse
-        ($this->view)->renderView('delete');
-        header("Location:/GetAll" );
+    public function delete()
+    {
+        $id = $_GET["todoID"];
+        Todos::do()->delete($id);
+        Redirect::to("/GetAll");
     }
-    public function submitEdit(){
-        
+    public function submitEdit()
+    {
+
         $res = Todos::do()->update($_POST);
-
-        // (new View)->renderView('GetAll');
-        header("Location:/GetAll" );
+        Redirect::to("/GetAll");
+    }
+    public function update()
+    {
+        extract($_POST);
+        $res = Todos::do()->find($id, "id");
+      
+        $res->status = 'done';
+        $res = (array)$res;
+        
+        Todos::do()->update($res, $id);
+        Redirect::to("/GetAll");
         
     }
 }

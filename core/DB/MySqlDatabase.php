@@ -35,7 +35,11 @@ class MySqlDatabase implements DatabaseInterface
         $this->query = "CREATE TABLE {$this->table}";
         return $this;
     }
-
+    public function delete($id)
+    {
+        $this->query = "delete from $this->table";
+        return $this;
+    }
     // Drop table then exec
     public function drop()
     {
@@ -74,7 +78,7 @@ class MySqlDatabase implements DatabaseInterface
         );
 
         $this->query = "UPDATE " . $this->table . " SET " . implode(",", $arr);
-        
+
         return $this;
     }
 
@@ -86,7 +90,7 @@ class MySqlDatabase implements DatabaseInterface
 
         // NOTE: WE CAN ADD OR WHERE 
         // NOTE: WE CAN ADD AND WHERE
-        $this->query .= " WHERE $val1 $operation '$val2'";
+        $this->query .= " WHERE  $val1 $operation '$val2'";
         return $this;
     }
 

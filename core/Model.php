@@ -39,8 +39,16 @@ abstract class  Model
         return $this->query->select($cols)->fetchAll();
     }
     
-    public function update(array $fields)
+    public function update(array $fields,$id)
     {
-        return $this->query->update($fields)->where("id",$_GET["id"])->exec() ;
+        return $this->query->update($fields)->where("id",$id)->exec() ;
+    }
+    // public function delete($id)
+    // {
+    //     $this->query = "delete form $this->table";
+    //     return $this;
+    // }
+    public function delete(string $id){
+        return $this->query->delete($id)->where('id',$id)->exec();
     }
 }

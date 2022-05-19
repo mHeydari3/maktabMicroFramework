@@ -24,6 +24,7 @@ $app->router->get('/delete', [TodoController::class, 'delete']);
 // $app->router->delete('/delete', [TodoController::class, 'delete']);
 $app->router->get('/edit', [TodoController::class, 'edit']);
 $app->router->post('/edit', [TodoController::class, 'submitEdit']);
+$app->router->post('/update', [TodoController::class, 'update']);
 // $app->router->put('/update', [TodoController::class, 'submitEdit']);
 
 

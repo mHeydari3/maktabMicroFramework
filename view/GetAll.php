@@ -42,13 +42,13 @@
                     <?php } ?>
 
                     <td>
-                        <a href='/edit?todoID=" . <?= $value->id ?> . "'>
+                        <a href='/edit?todoID=<?= $value->id ?>'>
                             <button>edit</button>
                         </a>
-                        <a href='/delete?todoID=" . <?= $value->id ?> . "'>
+                        <a href='/delete?todoID=<?= $value->id ?>'>
                             <button>delete</button>
                         </a>
-                        <a href='/delete?todoID=" . <?= $value->id ?> . "'>
+                        <a href='/delete?todoID=<?=$value->id ?>'>
                             <?php
                                 $change = '';
                                 $status = '';

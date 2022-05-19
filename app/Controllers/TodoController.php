@@ -62,7 +62,9 @@ class TodoController extends Controller
     public function edit()
     {
         $id = $_GET["todoID"];
+      
         $res = Todos::do()->find($id, "id");
+    
 
         ($this->view)->renderView('edit', [$res]);
     }

@@ -6,6 +6,7 @@ use App\core\Application;
 use App\app\renderView;
 use App\app\Controllers\HomeController;
 use App\app\Controllers\TodoController;
+use App\app\Controllers\AuthController;
 
 $app = new Application(__DIR__);
 
@@ -25,6 +26,14 @@ $app->router->get('/delete', [TodoController::class, 'delete']);
 $app->router->get('/edit', [TodoController::class, 'edit']);
 $app->router->post('/edit', [TodoController::class, 'submitEdit']);
 $app->router->post('/update', [TodoController::class, 'update']);
+
+$app->router->get('/register', [AuthController::class, 'register']);
+$app->router->post('/register', [AuthController::class, 'registerHandler']);
+
+$app->router->get('/login', [AuthController::class, 'login']);
+$app->router->post('/login', [AuthController::class, 'loginHandler']);
+
+
 // $app->router->put('/update', [TodoController::class, 'submitEdit']);
 
 

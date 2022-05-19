@@ -5,7 +5,7 @@ namespace App\core\DB\Connection;
 class MySqlConnection implements ConnectionInterface
 {
   private static $instance = null;
-  private $host = "localhost";
+  private $host = "localhost:3307";
   private $name = "tododb";
   private $user = "root";
   private $pass = "";

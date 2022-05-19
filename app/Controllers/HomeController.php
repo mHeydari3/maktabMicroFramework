@@ -3,8 +3,8 @@
 namespace App\app\Controllers;
 
 use App\app\Models\Branches;
-use App\core\View; 
-class HomeController
+use App\core\Controller;
+class HomeController extends Controller
 {
 public function index(){
 
@@ -18,7 +18,7 @@ public function index(){
         die(); */
 
         // 
-        (new View)->renderView('home', [
+        ($this->view)->renderView('home', [
             'name' => 'mohammad',
             'friends' => [
                 'ali', 'admid', 'reze'

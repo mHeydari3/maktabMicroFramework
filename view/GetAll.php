@@ -2,9 +2,9 @@
 
 <br />
 <style>
-    td {
-        border: 1px solid black;
-    }
+td {
+    border: 1px solid black;
+}
 </style>
 <div class="row">
     <div class="col col-3"></div>
@@ -31,7 +31,7 @@
                     echo "<tr>";
                     foreach ($value as $myKey => $item) {
                         if ($myKey == "title")
-                            echo "<td><a href='/GetByID?todoID=" . $value->id . "'>$item</a></td>";
+                            echo "<td><a href='/GetByIDG?todoID=" . $value->id . "'>$item</a></td>";
                         else
                             echo "<td>$item</td>";
                     }

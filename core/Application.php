@@ -11,6 +11,7 @@ class Application{
     public Router $router;
     public Request $request;
     public Response $response;
+    public View $view;
     public static $app;
 
     public function __construct($root)
@@ -19,6 +20,7 @@ class Application{
         $this->request = Request::getInstance();
         $this->router = new Router($this->request);
         $this->response = Response::getInstance();
+        $this->view=view::getInstance();
         self::$app=$this;
     }
 

@@ -5,20 +5,20 @@ namespace App\app\Controllers;
 use App\app\Models\JsonModel;
 use App\core\View;
 use App\app\Models\Todos;
+use App\core\Controller;
 
-
-class TodoController
+class TodoController extends Controller
 {
     public function GetAll()
     {
         $res = Todos::do()->select();
 
 
-        (new View)->renderView('GetAll', $res);
+        ($this-> view)->renderView('GetAll', $res);
     }
     public function GetById()
     {
-        (new View)->renderView('GetById');
+        ($this->view)->renderView('GetById');
     }
     public function GetByID_Post()
     {
@@ -26,20 +26,20 @@ class TodoController
         $res = Todos::do()->find($id, "id");
 
 
-        (new View)->renderView('ShowByID', [$res]);
+        ($this->view)->renderView('ShowByID', [$res]);
     }
     public function GetByID_Get()
     {
-        $id = $_GET['todoID'];
+        $id = $_GET['todoID']??null;
         $res = Todos::do()->find($id, "id");
 
 
-        (new View)->renderView('ShowByID', [$res]);
+        ($this->view)->renderView('ShowByID', [$res]);
     }
     public function AddTODO()
     {
         // die("a");
-        (new View)->renderView('AddTODO');
+        ($this->view)->renderView('AddTODO');
     }
     public function SendForm()
     {
@@ -60,7 +60,7 @@ class TodoController
     }
     public function Toggle()
     {
-        (new View)->renderView('Toggle');
+        ($this->view)->renderView('Toggle');
     }
     public function edit(){
         $id=$_GET["todoID"];
@@ -68,13 +68,13 @@ class TodoController
         $res = Todos::do()->find($id, "id");
         // var_dump($res);
         // die("a");
-        (new View)->renderView('edit',[$res]);
+        ($this->view)->renderView('edit',[$res]);
 
     }
     public function delete(){
         $id=$_GET["todoID"];
         //todo drop as databse
-        (new View)->renderView('delete');
+        ($this->view)->renderView('delete');
         header("Location:/GetAll" );
     }
     public function submitEdit(){

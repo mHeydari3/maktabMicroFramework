@@ -74,18 +74,16 @@ class TodoController extends Controller
     }
     public function submitEdit()
     {
-
-        $res = Todos::do()->update($_POST);
+       
+        $res = Todos::do()->update($_POST,$_GET['id']);
         Redirect::to("/GetAll");
     }
     public function update()
     {
         extract($_POST);
         $res = Todos::do()->find($id, "id");
-      
         $res->status = 'done';
         $res = (array)$res;
-        
         Todos::do()->update($res, $id);
         Redirect::to("/GetAll");
         

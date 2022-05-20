@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: May 12, 2022 at 02:27 PM
+-- Generation Time: May 20, 2022 at 09:15 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -44,6 +44,30 @@ INSERT INTO `todos` (`id`, `title`, `description`, `deadline`, `color`, `status`
 (1, 'حل تمرین هفته 15', 'در این هفته استاد صادقی فر در گروه همراه ما بودند', '1401-02-25', 'blue', 'undone'),
 (2, 'ویژگی گت بای آیدی', 'این ویژگی هنوز در پروژه ما اعمال نشده، آن را تکمیل نکرده ایم', '0000-00-00', 'green', 'undone');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES
+(1, 'Mohammad ', 'Sha\'abani', 'mohammadShabani@gmail.com', '1234'),
+(2, 'Mohammad ', 'Panahpouri', 'mohammadpouri@gmail.com', '1234'),
+(3, 'younes', 'mokhtari doqozlou', 'younesmokhtaridoqouzlo@gmail.com', '0987654321'),
+(4, 'amir reza', 'ardebili (daraye 10 ekhterae)', 'ardebili@gmail.com', '1234');
+
 --
 -- Indexes for dumped tables
 --
@@ -55,6 +79,12 @@ ALTER TABLE `todos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -63,6 +93,12 @@ ALTER TABLE `todos`
 --
 ALTER TABLE `todos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -13,7 +13,8 @@ class AuthController extends Controller
     public function register()
     {
                 var_dump(Session::get('email'));
-                    die('die');
+                
+                die('die');
         ($this->view)->renderView('register');
     }
 
@@ -62,8 +63,8 @@ class AuthController extends Controller
   
       
     {   //Session::destroy();
-        // Session::unset("email");
-        unset($_SESSION['email']);
+        Session::unset("email");
+        // unset($_SESSION['email']);
         
 
 

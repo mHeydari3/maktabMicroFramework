@@ -32,6 +32,7 @@ $app->router->post('/register', [AuthController::class, 'registerHandler']);
 
 $app->router->get('/login', [AuthController::class, 'login']);
 $app->router->post('/login', [AuthController::class, 'loginHandler']);
+$app->router->get('/exit', [AuthController::class, 'exit']);
 
 
 // $app->router->put('/update', [TodoController::class, 'submitEdit']);

@@ -1,4 +1,17 @@
-<h1>Get All TODOs</h1>
+<?php
+
+use App\app\utility\Redirect;
+use App\app\utility\Session;
+
+Session::init();
+
+if (is_null(Session::get('email'))) {
+    Redirect::to("/register");
+}
+
+
+
+?><h1>Get All TODOs</h1>
 </br>
 
 <div class="row">
@@ -48,7 +61,7 @@
                         <a href='/delete?todoID=<?= $value->id ?>'>
                             <button>delete</button>
                         </a>
-                        <a href='/delete?todoID=<?=$value->id ?>'>
+                        <a href='/delete?todoID=<?= $value->id ?>'>
                             <?php
                                 $change = '';
                                 $status = '';
@@ -70,7 +83,7 @@
                                     $val = "done";
                                     $color = "green";
                                     $status = "disabled";
-                                } 
+                                }
 
                                 ?>
                             <form action="/update" method="post">
